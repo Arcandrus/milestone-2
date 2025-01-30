@@ -5,16 +5,20 @@ function startGame() {
   // Reset the card Array
   let cards = [];
   let i = 0;
+
   // Add 4 cards to the Array
   while (i < 4) {
+    let chooseColor = Math.floor(Math.random() * colors.length)
     let card = {
       id: i,
-      color: colors[Math.floor(Math.random() * 4)],
+      color: colors[chooseColor],
       flipped: false
     };
     cards.push(card);
+    colors.splice(chooseColor, 1);
     i++;
   }
+
   console.log(`Generated ${cards.length} cards`)
   for (i in cards) {
     console.log(`ID ${cards[i].id}`)

@@ -5,7 +5,6 @@ function startGame() {
   // Reset the card Array
   let cards = [];
   let i = 0;
-
   // Add 4 pairs to the Array
   while (i < 4) {
     // Choose card color
@@ -16,14 +15,13 @@ function startGame() {
       color: colors[chooseColor],
     };
     // Add two of that card to the array
-    cards.push(card);
-    cards.push(card);
+    cards.push(card, card);
     // Remove the chosen color from the array to prevent duplication
     colors.splice(chooseColor, 1);
     // Increment counter
     i++;
   }
-  // Set all cards to facce down
+  // Set all cards to face down
   for (i in cards) {
     cards[i].flipped = false;
   }

@@ -1,6 +1,10 @@
 let cards = [];
 
 function startGame() {
+  generateCards()
+}
+
+function generateCards() {
   let colors = ["White", "Blue", "Black", "Red", "Green"]
   // Reset the card Array
   let cards = [];
@@ -25,10 +29,25 @@ function startGame() {
   for (i in cards) {
     cards[i].flipped = false;
   }
-  // Console log for testing
-  console.log(`Generated ${cards.length} cards`)
+  shuffleCards(cards);
+  renderCards(cards);
+}
+
+function shuffleCards(cards) {
+  for (let i = cards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [cards[i], cards[j]] = [cards[j], cards[i]]; // Swap elements
+  }
+}
+
+function renderCards(cards) {
+  cardContainer.innerHTML = ``;
   for (i in cards) {
-    console.log(`ID ${cards[i].id}`)
-    console.log(`Color ${cards[i].color}`)
+    let cardElement = document.createElement('div');
+    cardElement.classList.add('card');
+    cardElement.setAttribute('id', cards[i].id);
+    cardElement.innerText = `${cards[i].color}`;
+    cardElement.onclick = () => flipCard(cardElement, cards);
+    cardContainer.appendChild(cardElement);
   }
 }

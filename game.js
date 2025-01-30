@@ -44,7 +44,7 @@ function renderCards(cards) {
   cardContainer.innerHTML = ``;
   for (i in cards) {
     let cardElement = document.createElement('div');
-    cardElement.classList.add('card');
+    cardElement.classList.add('card', 'col-3');
     cardElement.setAttribute('id', cards[i].id);
     cardElement.innerText = `${cards[i].color}`;
     cardElement.onclick = () => flipCard(cardElement, cards);

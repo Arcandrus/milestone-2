@@ -124,15 +124,19 @@ function checkMatch(checkFirst, checkSecond) {
     matchDisplay.innerText = `Matches: ${matches}`;
     // Log for testing
     console.log(`Cards Match`);
-  } 
+  }
   // if they don't match
-    else {
+  else {
+    // Disable mouse clicks until the delay has passed
+    document.body.style.pointerEvents = 'none';
     // Flip them face down again
     setTimeout(() => {
       cardOne.classList.remove('flipped', 'bold');
       cardTwo.classList.remove('flipped', 'bold');
       cardOne.classList.add('not-flipped');
       cardTwo.classList.add('not-flipped');
+      // Re-enable card clicks
+      document.body.style.pointerEvents = 'auto';
     }, 1500);
     // Log for testing
     console.log(`Cards Do Not Match`);

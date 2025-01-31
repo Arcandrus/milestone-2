@@ -54,49 +54,90 @@ function shuffleCards(cards) {
 
 // Render the cards to the browser
 function renderCards(cards) {
-  // Reset the card display
+  // Reset the card display and ID values
+  let id = 0;
   cardContainer.innerHTML = ``;
   // Iterate the cards array
   for (i in cards) {
     // Create each card
     let cardElement = document.createElement('div');
     // Assign its classes
-    cardElement.classList.add('card', 'col-3', 'not-flipped');
+    cardElement.classList.add(cards[i].color, 'card', 'col-3', 'not-flipped');
     // Assign its ID
-    cardElement.setAttribute('id', cards[i].id);
-    // Assign its color
+    cardElement.setAttribute('id', id);
+    // Assign its color. later this will be an image
     cardElement.innerText = `${cards[i].color}`;
     // Add onClick function for flipping
     cardElement.onclick = () => flipCard(cardElement);
     // Display the element within the cardContainer
     cardContainer.appendChild(cardElement);
+    // Increment the ID counter
+    id++;
   }
 }
 
 function flipCard(e) {
   // Log for testing
   console.log(e);
-
-  // If the card has already been matched
-  if (e.classList.contains('matched')) {
-    exit;
+  console.log(e.classList[0]);
+  console.log(e.id);
+  // If the card has already been matched or flipped
+  if (e.classList.contains('matched') || (e.classList.contains('flipped'))) {
+    return;
   }
   // If the clicked card is face-down (not-flipped)
   if (e.classList.contains('not-flipped')) {
     // Flip it face-up
     e.classList.add('bold', 'flipped');
     e.classList.remove('not-flipped');
-    // Assign its div ID as the value we check
+    // Assign its div color attribute as the value we check
     if (cardFirst == null) {
-      cardFirst = e.id;
+      cardFirst = e.id
+      console.log(`First Chosen: ${cardFirst}`);
     } else if (cardSecond == null) {
-      cardSecond = e.id;
+      cardSecond = e.id
+      console.log(`Second Chosen: ${cardSecond}`);
     }
   }
   // If we have selected 2 cards
-  if (cardFirst != null && cardSecond != null) {
+  if (cardFirst !== null && cardSecond !== null) {
     // Call checkMatch
     console.log(`Cards Chosen: ${cardFirst}, ${cardSecond}`);
-    checkMatch(cardFirst, cardSecond);
+    setTimeout(() => checkMatch(cardFirst, cardSecond), 1500);
   }
+}
+
+// Check if the chosen cards match
+function checkMatch(checkFirst, checkSecond) {
+  // Log for testing
+  console.log(`Cards Checking: ${checkFirst}, ${checkSecond}`);
+  // Find the card divs we are comparing
+  cardOne = document.getElementById(checkFirst);
+  cardTwo = document.getElementById(checkSecond);
+  // If they match
+  if (cardOne.classList[0] == cardTwo.classList[0]) {
+    // Mark the cards as matched
+    cardOne.classList.add('matched');
+    cardTwo.classList.add('matched');
+    // Incriment the match counter
+    matches++;
+    matchDisplay.innerText = `Matches: ${matches}`;
+    // Log for testing
+    console.log(`Cards Match`);
+  } 
+  // if they don't match
+    else {
+    // Flip them face down again
+    cardOne.classList.remove('flipped', 'bold');
+    cardTwo.classList.remove('flipped', 'bold');
+    cardOne.classList.add('not-flipped');
+    cardTwo.classList.add('not-flipped');
+    // Log for testing
+    console.log(`Cards Do Not Match`);
+  }
+  // Reset chosen cards
+  cardFirst = null;
+  cardSecond = null;
+  // Log for testing
+  console.log(`Cards Reset: ${cardFirst} , ${cardSecond}`);
 }

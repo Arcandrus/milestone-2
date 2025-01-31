@@ -103,7 +103,7 @@ function flipCard(e) {
   if (cardFirst !== null && cardSecond !== null) {
     // Call checkMatch
     console.log(`Cards Chosen: ${cardFirst}, ${cardSecond}`);
-    setTimeout(() => checkMatch(cardFirst, cardSecond), 1500);
+    checkMatch(cardFirst, cardSecond);
   }
 }
 
@@ -128,10 +128,12 @@ function checkMatch(checkFirst, checkSecond) {
   // if they don't match
     else {
     // Flip them face down again
-    cardOne.classList.remove('flipped', 'bold');
-    cardTwo.classList.remove('flipped', 'bold');
-    cardOne.classList.add('not-flipped');
-    cardTwo.classList.add('not-flipped');
+    setTimeout(() => {
+      cardOne.classList.remove('flipped', 'bold');
+      cardTwo.classList.remove('flipped', 'bold');
+      cardOne.classList.add('not-flipped');
+      cardTwo.classList.add('not-flipped');
+    }, 1500);
     // Log for testing
     console.log(`Cards Do Not Match`);
   }

@@ -78,11 +78,11 @@ The site has not yet been deployed using [GitPages](https://pages.github.com) in
 + The deployed site will update automatically upon new commits to the master branch.
 
 ## Validator Testing
-**HTML** Not yet tested [W3C Validator](./readme-assets/html_pass.png)
+**HTML** Tested and passed by [W3C Validator](./readme-assets/html_pass.png)
 
-**CSS** Not yet tested [Jigsaw Validator](./readme-assets/css_pass.png)
+**CSS** Tested and passed by [Jigsaw Validator](./readme-assets/css_pass.png)
 
-**Accessibility** Not yet tested using [Lighthouse DevTools](./readme-assets/lighthouse.png)
+**Accessibility** Tested and passed by [Lighthouse DevTools](./readme-assets/lighthouse.png)
 
 I have also asked several users to explore the website on different devices including iPhone 14, iPad, Oppo mobile devices, Sony mobile devices and several different PC and Laptop setups to ensure consitency and usability across multiple platforms.  
 

@@ -13,7 +13,9 @@ function startGame() {
   matches = 0;
   cardFirst = null;
   cardSecond = null;
+  cardContainer.style.pointerEvents = 'auto';
   // Reset the UI
+  timerDisplay.innerText = `Time: `;
   matchDisplay.innerText = `Matches: ${matches}`;
   cardContainer.innerHTML = ``;
   winCheck.innerText = ``;
@@ -155,10 +157,18 @@ function checkMatch(checkFirst, checkSecond) {
   console.log(`Cards Reset: ${cardFirst} , ${cardSecond}`);
 }
 
+// Check if game is won
 function checkWin() {
+  // If the matched cards were not the last pair
   if (matches != 4) {
+    // Do nothing
     winCheck.innerText = ``;
-  } else {
+  } 
+  // If the matched cards were the last pair 
+  else {
+    // Disable furthur clicks on the game space
+    cardContainer.style.pointerEvents = 'none';
+    // Display win message
     winCheck.innerText = `You Win!`;
   }
 }

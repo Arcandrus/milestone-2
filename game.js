@@ -200,7 +200,7 @@ function checkWin() {
     cardContainer.style.pointerEvents = 'none';
     // Display win message
     score = Math.ceil((matches * 100) / timeCount);
-    winCheck.innerHTML = `You Win!<br>Score: ${score}`;
+    winCheck.innerHTML = `<h1>You Win!</h1><br>Score: ${score}`;
     stopTimer();
   }
 }

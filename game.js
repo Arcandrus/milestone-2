@@ -121,10 +121,6 @@ function renderCards() {
 }
 
 function flipCard(e) {
-  // Log for testing
-  console.log(e);
-  console.log(e.classList[0]);
-  console.log(e.id);
   // If the card has already been matched or flipped
   if (e.classList.contains('matched') || (e.classList.contains('flipped'))) {
     return;
@@ -147,15 +143,12 @@ function flipCard(e) {
   // If we have selected 2 cards
   if (cardFirst !== null && cardSecond !== null) {
     // Call checkMatch
-    console.log(`Cards Chosen: ${cardFirst}, ${cardSecond}`);
     checkMatch(cardFirst, cardSecond);
   }
 }
 
 // Check if the chosen cards match
 function checkMatch(checkFirst, checkSecond) {
-  // Log for testing
-  console.log(`Cards Checking: ${checkFirst}, ${checkSecond}`);
   // Find the card divs we are comparing
   cardOne = document.getElementById(checkFirst);
   cardTwo = document.getElementById(checkSecond);
@@ -167,8 +160,6 @@ function checkMatch(checkFirst, checkSecond) {
     // Incriment the match counter
     matches++;
     matchDisplay.innerText = `Matches: ${matches}`;
-    // Log for testing
-    console.log(`Cards Match`);
     checkWin();
   }
 
@@ -187,8 +178,6 @@ function checkMatch(checkFirst, checkSecond) {
       // Re-enable card clicks
       cardContainer.style.pointerEvents = 'auto';
     }, 1500);
-    // Log for testing
-    console.log(`Cards Do Not Match`);
   }
 
   // Reset chosen cards

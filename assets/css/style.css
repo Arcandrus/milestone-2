@@ -1,9 +1,36 @@
+#gameContainer {
+  text-align: center;
+  align-items: center;
+}
+
 #cardContainer {
   width: 450px;
-  margin: 0 auto;
+  margin: 30px auto 30px auto;
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+#winDisplay {
+  margin-top: auto;
+}
+
+#buttons {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.button {
+  width: fit-content;
+  padding: 10px 20px 10px 20px;
+  margin: 10px 20px 10px 20px;
+  border-radius: 25%;
+  border: solid, 2px, black;
+}
+
+h1 {
+  text-align: center;
 }
 
 .card {

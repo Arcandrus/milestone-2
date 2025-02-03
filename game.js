@@ -2,6 +2,10 @@ let cards = [];
 let matches = 0;
 let cardFirst = null;
 let cardSecond = null;
+const cardContainer = document.getElementById('cardContainer');
+const timerDisplay = document.getElementById('timerDisplay');
+const matchDisplay = document.getElementById('matchDisplay');
+const winCheck = document.getElementById('winDisplay');
 
 function startGame() {
   // Reset control variables
@@ -12,6 +16,7 @@ function startGame() {
   // Reset the UI
   matchDisplay.innerText = `Matches: ${matches}`;
   cardContainer.innerHTML = ``;
+  winCheck.innerText = ``;
   //Gemerate cards
   generateCards()
   // Shuffle the cards
@@ -34,7 +39,6 @@ function generateCards() {
     let card = {
       id: i,
       color: colors[chooseColor],
-      flipped: false
     };
     // Add two of that card to the array
     cards.push(card, card);
@@ -45,7 +49,7 @@ function generateCards() {
   }
 }
 
-function shuffleCards(cards) {
+function shuffleCards() {
   for (let i = cards.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [cards[i], cards[j]] = [cards[j], cards[i]]; // Swap elements
@@ -53,7 +57,7 @@ function shuffleCards(cards) {
 }
 
 // Render the cards to the browser
-function renderCards(cards) {
+function renderCards() {
   // Reset the card display and ID values
   let id = 0;
   cardContainer.innerHTML = ``;
@@ -124,11 +128,13 @@ function checkMatch(checkFirst, checkSecond) {
     matchDisplay.innerText = `Matches: ${matches}`;
     // Log for testing
     console.log(`Cards Match`);
+    checkWin();
   }
+
   // if they don't match
   else {
     // Disable mouse clicks until the delay has passed
-    document.body.style.pointerEvents = 'none';
+    cardContainer.style.pointerEvents = 'none';
     // Flip them face down again
     setTimeout(() => {
       cardOne.classList.remove('flipped', 'bold');
@@ -136,14 +142,23 @@ function checkMatch(checkFirst, checkSecond) {
       cardOne.classList.add('not-flipped');
       cardTwo.classList.add('not-flipped');
       // Re-enable card clicks
-      document.body.style.pointerEvents = 'auto';
+      cardContainer.style.pointerEvents = 'auto';
     }, 1500);
     // Log for testing
     console.log(`Cards Do Not Match`);
   }
+
   // Reset chosen cards
   cardFirst = null;
   cardSecond = null;
   // Log for testing
   console.log(`Cards Reset: ${cardFirst} , ${cardSecond}`);
+}
+
+function checkWin() {
+  if (matches != 4) {
+    winCheck.innerText = ``;
+  } else {
+    winCheck.innerText = `You Win!`;
+  }
 }

@@ -106,7 +106,7 @@ function renderCards() {
     // Create each card
     let cardElement = document.createElement('div');
     // Assign its classes
-    cardElement.classList.add(cards[i].color, 'card', 'col-3', 'not-flipped');
+    cardElement.classList.add(cards[i].color, 'card', 'not-flipped');
     // Assign its ID
     cardElement.setAttribute('id', id);
     // Assign its color. later this will be an image

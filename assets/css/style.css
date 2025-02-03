@@ -3,7 +3,9 @@ body {
   background-color: #cccccc;
   background-position: top center;
   background-size: cover;
- }
+  overflow-x: hidden;
+  color: #ffffff;
+}
 
 #gameContainer {
   text-align: center;
@@ -11,15 +13,19 @@ body {
 }
 
 #cardContainer {
-  width: 450px;
+  width: 60vw;
   margin: 30px auto 30px auto;
-  display: flex;
-  align-content: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 20%); 
+  grid-auto-rows: 130px;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
 }
 
 #winDisplay {
-  margin-top: auto;
+  margin: 20px auto 20px auto;
+  text-align: center;
 }
 
 #buttons {
@@ -32,18 +38,19 @@ body {
   width: fit-content;
   padding: 10px 20px 10px 20px;
   margin: 10px 20px 10px 20px;
-  border-radius: 25%;
-  border: solid, 2px, black;
+  border-radius: 30%;
+  border: solid, 4px, white;
 }
 
 h1 {
+  margin: 20px 20px 10px 20px;;
   text-align: center;
 }
 
 .card {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
+  max-width: 100px;
+  margin: 2px;
+  height: 100%;
   text-align: center;
   align-content: center;
   justify-content: center;
@@ -51,4 +58,10 @@ h1 {
 
 .bold {
   font-weight: bold;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
 }

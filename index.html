@@ -19,21 +19,20 @@
     <h1>Magic: the Gathering Memory game!</h1>
     <!-- Difficulty Selection -->
     <div id="buttons" class="row">
-      <div id="startEasy" class="button col-3" onclick="startGame('easy')">Easy</div>
-      <div id="startMedium" class="button col-3" onclick="startGame('medium')">Medium</div>
-      <div id="startHard" class="button col-3" onclick="startGame('hard')">Hard</div>
+      <div id="startEasy" class="button col-3" onclick="startGame('easy')">Easy<Br>4 Pairs</div>
+      <div id="startMedium" class="button col-3" onclick="startGame('medium')">Medium<br>6 Pairs</div>
+      <div id="startHard" class="button col-3" onclick="startGame('hard')">Hard<br>8 Pairs</div>
     </div>
 
     <!-- HUD Container -->
-    <div id="scoring" class="row justify-content-md-center col-12">
-      <div id="timerDisplay" class="justify-content-md-center col-2">Time: </div>
-      <div id="matchDisplay" class="justify-content-md-center col-2">Matches: </div>
+    <div id="scoring" class="row justify-content-center col-12">
+      <div id="timerDisplay" class="justify-content-center col-4">Time: </div>
+      <div id="matchDisplay" class="justify-content-center col-4">Matches: </div>
     </div>
 
     <!-- Cards Container -->
-    <div id="cardContainer" class="row justify-content-md-center col-12"></div>
-    <div id="winDisplay" class="row justify-content-md-center col-12"></div>
-  </div>
+    <div id="cardContainer" class="row justify-content-center col-12"></div>
+    <div id="winDisplay" class="row justify-content-center col-12"></div>
   </div>
 
   <script src="game.js"></script>

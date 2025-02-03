@@ -2,12 +2,14 @@ let cards = [];
 let matches = 0;
 let cardFirst = null;
 let cardSecond = null;
+let level = 'easy';
+let pairs = 4;
 const cardContainer = document.getElementById('cardContainer');
 const timerDisplay = document.getElementById('timerDisplay');
 const matchDisplay = document.getElementById('matchDisplay');
 const winCheck = document.getElementById('winDisplay');
 
-function startGame() {
+function startGame(gameMode) {
   // Reset control variables
   cards = [];
   matches = 0;
@@ -19,8 +21,22 @@ function startGame() {
   matchDisplay.innerText = `Matches: ${matches}`;
   cardContainer.innerHTML = ``;
   winCheck.innerText = ``;
+  switch (gameMode) {
+    default:
+      pairs = 4;
+      break;
+    case 'easy':
+      pairs = 4;
+      break;
+    case 'medium':
+      pairs = 6;
+      break;
+    case 'hard':
+      pairs = 8;
+      break;
+  }
   //Gemerate cards
-  generateCards()
+  generateCards(pairs)
   // Shuffle the cards
   shuffleCards(cards);
   // Render the cards to the browser
@@ -28,13 +44,28 @@ function startGame() {
 }
 
 // Generate X number of card pairs (4 for testing)
-function generateCards() {
-  let colors = ["White", "Blue", "Black", "Red", "Green"]
+function generateCards(pairs) {
+  let colors = [
+    "White",
+    "Blue",
+    "Black",
+    "Red",
+    "Green",
+    "Selesnya",
+    "Orzhov",
+    "Boros",
+    "Azorius",
+    "Dimir",
+    "Rakdos",
+    "Golgari",
+    "Izzet",
+    "Simic",
+    "Gruul"]
   // Reset the card Array
   cards = [];
   let i = 0;
-  // Add 4 pairs to the Array
-  while (i < 4) {
+  // Add chosen amount of pairs pairs to the Array
+  while (i < pairs) {
     // Choose card color
     let chooseColor = Math.floor(Math.random() * colors.length)
     // Assign values to card
@@ -160,10 +191,10 @@ function checkMatch(checkFirst, checkSecond) {
 // Check if game is won
 function checkWin() {
   // If the matched cards were not the last pair
-  if (matches != 4) {
+  if (matches != pairs) {
     // Do nothing
     winCheck.innerText = ``;
-  } 
+  }
   // If the matched cards were the last pair 
   else {
     // Disable furthur clicks on the game space

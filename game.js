@@ -41,7 +41,7 @@ function startGame(gameMode) {
       break;
   }
   //Gemerate cards
-  generateCards(pairs)
+  generateCards(pairs);
   // Shuffle the cards
   shuffleCards(cards);
   // Render the cards to the browser
@@ -67,14 +67,14 @@ function generateCards(pairs) {
     "golgari",
     "izzet",
     "simic",
-    "gruul"]
+    "gruul"];
   // Reset the card Array
   cards = [];
   let i = 0;
   // Add chosen amount of pairs pairs to the Array
   while (i < pairs) {
     // Choose card color
-    let chooseColor = Math.floor(Math.random() * colors.length)
+    let chooseColor = Math.floor(Math.random() * colors.length);
     // Assign values to card
     let card = {
       id: i,
@@ -102,7 +102,7 @@ function renderCards() {
   let id = 0;
   cardContainer.innerHTML = ``;
   // Iterate the cards array
-  for (i in cards) {
+  for (var i in cards) {
     // Create each card
     let cardElement = document.createElement('div');
     // Assign its classes
@@ -133,10 +133,10 @@ function flipCard(e) {
     e.classList.remove('not-flipped');
     // Assign its div color attribute as the value we check
     if (cardFirst == null) {
-      cardFirst = e.id
+      cardFirst = e.id;
       console.log(`First Chosen: ${cardFirst}`);
     } else if (cardSecond == null) {
-      cardSecond = e.id
+      cardSecond = e.id;
       console.log(`Second Chosen: ${cardSecond}`);
     }
   }

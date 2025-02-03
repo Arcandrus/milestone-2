@@ -110,7 +110,7 @@ function renderCards() {
     // Assign its ID
     cardElement.setAttribute('id', id);
     // Assign its color. later this will be an image
-    cardElement.innerText = `${cards[i].color}`;
+    cardElement.innerText = ``;
     // Add onClick function for flipping
     cardElement.onclick = () => flipCard(cardElement);
     // Display the element within the cardContainer
@@ -133,6 +133,7 @@ function flipCard(e) {
   if (e.classList.contains('not-flipped')) {
     // Flip it face-up
     e.classList.add('bold', 'flipped');
+    e.innerText = e.classList[0];
     e.classList.remove('not-flipped');
     // Assign its div color attribute as the value we check
     if (cardFirst == null) {
@@ -181,6 +182,8 @@ function checkMatch(checkFirst, checkSecond) {
       cardTwo.classList.remove('flipped', 'bold');
       cardOne.classList.add('not-flipped');
       cardTwo.classList.add('not-flipped');
+      cardOne.innerText = ``;
+      cardTwo.innerText = ``;
       // Re-enable card clicks
       cardContainer.style.pointerEvents = 'auto';
     }, 1500);

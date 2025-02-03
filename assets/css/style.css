@@ -1,6 +1,8 @@
 body {
-  background-image: url('../assets/images/background.png');
+  background-image: url('../images/background.png');
   background-color: #cccccc;
+  background-position: top center;
+  background-size: cover;
  }
 
 #gameContainer {

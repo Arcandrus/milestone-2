@@ -177,7 +177,7 @@ function checkMatch(checkFirst, checkSecond) {
       cardTwo.innerText = ``;
       // Re-enable card clicks
       cardContainer.style.pointerEvents = 'auto';
-    }, 1500);
+    }, 1000);
   }
 
   // Reset chosen cards

@@ -4,6 +4,8 @@ let cardFirst = null;
 let cardSecond = null;
 let level = 'easy';
 let pairs = 4;
+let timerInterval;
+let timeCount = 0;
 const cardContainer = document.getElementById('cardContainer');
 const timerDisplay = document.getElementById('timerDisplay');
 const matchDisplay = document.getElementById('matchDisplay');
@@ -41,9 +43,11 @@ function startGame(gameMode) {
   shuffleCards(cards);
   // Render the cards to the browser
   renderCards(cards);
+  // Start the timer
+  timerControl();
 }
 
-// Generate X number of card pairs (4 for testing)
+// Generate X number of card pairs
 function generateCards(pairs) {
   let colors = [
     "White",
@@ -201,5 +205,23 @@ function checkWin() {
     cardContainer.style.pointerEvents = 'none';
     // Display win message
     winCheck.innerText = `You Win!`;
+    stopTimer();
   }
+}
+
+//Timer control
+function timerControl() {
+  // Start the timer only if not already running
+  if (!timerInterval) {
+    timerInterval = setInterval(() => {
+      timeCount++;
+      // Update display
+      timerDisplay.innerHTML = `Time: ${timeCount}s`;
+    }, 1000);
+  }
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+  timerInterval = null;
 }

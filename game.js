@@ -6,6 +6,7 @@ let level = 'easy';
 let pairs = 4;
 let timerInterval;
 let timeCount = 0;
+let score = 0;
 const cardContainer = document.getElementById('cardContainer');
 const timerDisplay = document.getElementById('timerDisplay');
 const matchDisplay = document.getElementById('matchDisplay');
@@ -17,9 +18,11 @@ function startGame(gameMode) {
   matches = 0;
   cardFirst = null;
   cardSecond = null;
+  timeCount = 0;
+  score = 0;
   cardContainer.style.pointerEvents = 'auto';
   // Reset the UI
-  timerDisplay.innerText = `Time: `;
+  timerDisplay.innerText = `Time: ${timeCount}s`;
   matchDisplay.innerText = `Matches: ${matches}`;
   cardContainer.innerHTML = ``;
   winCheck.innerText = ``;
@@ -204,7 +207,8 @@ function checkWin() {
     // Disable furthur clicks on the game space
     cardContainer.style.pointerEvents = 'none';
     // Display win message
-    winCheck.innerText = `You Win!`;
+    score = Math.ceil((matches * 100) / timeCount);
+    winCheck.innerHTML = `You Win!<br>Score: ${score}`;
     stopTimer();
   }
 }

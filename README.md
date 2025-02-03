@@ -17,7 +17,7 @@ Code Institute Project Milestone 2 - Interactive Front End Development
 + [Validator Testing](#validator-testing)
 + [Credits](#credits)
 
-![](./readme-assets/responsive.png)
+![](./readme-assets/responsive_ui.png)
 
 ## Demo
 A live demo to the website can be found [here](https://arcandrus.github.io/milestone-2/index.html)
@@ -44,7 +44,7 @@ The key area I focused on during planning for this was to make everything respon
 ## Skeleton
 I didn't have to consider much when it came to the skeleton as the basic formatting of the game was very clear to me. Everything is presented centrally aligned and will resize itself while keeping the same layout across all devices.
 
-The Wireframe design can be found [here](./readme-assets/mtg-wireframe.pdf) (pdf format).
+The Wireframe design can be found [here](./readme-assets/mtg_memory_game_wireframe.pdf) (pdf format).
 
 ## Surface
 I used a very simple and subtle color scheme for this project as again I didn't want to introduce visual clutter to the experience.
@@ -78,11 +78,11 @@ The site has not yet been deployed using [GitPages](https://pages.github.com) in
 + The deployed site will update automatically upon new commits to the master branch.
 
 ## Validator Testing
-**HTML** Not yet tested [W3C Validator](./readme-assets/html-pass.png)
+**HTML** Not yet tested [W3C Validator](./readme-assets/html_pass.png)
 
-**CSS** Not yet tested [Jigsaw Validator](./readme-assets/css-pass.png)
+**CSS** Not yet tested [Jigsaw Validator](./readme-assets/css_pass.png)
 
-**Accessibility** Not yet tested using [Lighthouse DevTools](./readme-assets/lighthouse-pass.png)
+**Accessibility** Not yet tested using [Lighthouse DevTools](./readme-assets/lighthouse.png)
 
 I have also asked several users to explore the website on different devices including iPhone 14, iPad, Oppo mobile devices, Sony mobile devices and several different PC and Laptop setups to ensure consitency and usability across multiple platforms.  
 

@@ -20,7 +20,7 @@ Code Institute Project Milestone 2 - Interactive Front End Development
 ![](./readme-assets/responsive.png)
 
 ## Demo
-A live demo to the website can be found [here]([https://arcandrus.github.io/milestone-2/index.html])
+A live demo to the website can be found [here](https://arcandrus.github.io/milestone-2/index.html)
 
 ## UX
 Given that this is a one page project I wanted to focus on presenting a clean and polished game to the user.

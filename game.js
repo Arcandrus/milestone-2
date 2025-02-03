@@ -53,21 +53,21 @@ function startGame(gameMode) {
 // Generate X number of card pairs
 function generateCards(pairs) {
   let colors = [
-    "White",
-    "Blue",
-    "Black",
-    "Red",
-    "Green",
-    "Selesnya",
-    "Orzhov",
-    "Boros",
-    "Azorius",
-    "Dimir",
-    "Rakdos",
-    "Golgari",
-    "Izzet",
-    "Simic",
-    "Gruul"]
+    "white",
+    "blue",
+    "black",
+    "red",
+    "green",
+    "selesnya",
+    "orzhov",
+    "boros",
+    "azorius",
+    "dimir",
+    "rakdos",
+    "golgari",
+    "izzet",
+    "simic",
+    "gruul"]
   // Reset the card Array
   cards = [];
   let i = 0;
@@ -133,7 +133,7 @@ function flipCard(e) {
   if (e.classList.contains('not-flipped')) {
     // Flip it face-up
     e.classList.add('bold', 'flipped');
-    e.innerText = e.classList[0];
+    e.innerHTML = `<img src="assets/images/${e.classList[0]}.png" width="100%">`;
     e.classList.remove('not-flipped');
     // Assign its div color attribute as the value we check
     if (cardFirst == null) {

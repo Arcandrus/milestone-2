@@ -16,8 +16,8 @@ body {
   width: 60vw;
   margin: 30px auto 30px auto;
   display: grid;
-  grid-template-columns: repeat(4, 20%); 
-  grid-auto-rows: 130px;
+  grid-template-columns: repeat(4, 100px); 
+  grid-auto-rows: 140px;
   gap: 10px;
   align-items: center;
   justify-items: center;
@@ -64,4 +64,16 @@ h1 {
   display: flex;
   margin-bottom: 10px;
   justify-content: space-evenly;
+}
+
+.not-flipped {
+  background-image: url('../images/card_back.jpg');
+  background-position: top center;
+  background-size: cover;
+}
+
+.flipped {
+  border-radius: 10%;
+  border: solid, black, 6px;
+  background-color: #F5F5FF;
 }

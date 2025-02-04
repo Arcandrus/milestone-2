@@ -30,11 +30,13 @@ body {
 }
 
 #matchDisplay {
+  width: fit-content;
   text-align: center;
   align-content: center;
 }
 
 #timerDisplay {
+  width: fit-content;
   text-align: center;
   align-content: center;
 }

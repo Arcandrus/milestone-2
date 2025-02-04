@@ -124,7 +124,7 @@ function flipCard(e) {
   if (e.classList.contains('not-flipped')) {
     // Flip it face-up
     e.classList.add('flipped');
-    e.innerHTML = `<img src="assets/images/${e.classList[0]}.png" width="100%">`;
+    e.innerHTML = `<img src="assets/images/${e.classList[0]}.png">`;
     e.classList.remove('not-flipped');
     // Assign its div color attribute as the value we check
     if (cardFirst == null) {

@@ -30,12 +30,12 @@ body {
 }
 
 #matchDisplay {
-  text-align: left;
+  text-align: center;
   align-content: center;
 }
 
 #timerDisplay {
-  text-align: right;
+  text-align: center;
   align-content: center;
 }
 

@@ -27,9 +27,6 @@ function startGame(gameMode) {
   cardContainer.innerHTML = ``;
   winCheck.innerText = ``;
   switch (gameMode) {
-    default:
-      pairs = 4;
-      break;
     case 'easy':
       pairs = 4;
       break;
@@ -109,8 +106,6 @@ function renderCards() {
     cardElement.classList.add(cards[i].color, 'card', 'not-flipped');
     // Assign its ID
     cardElement.setAttribute('id', id);
-    // Assign its color. later this will be an image
-    cardElement.innerText = ``;
     // Add onClick function for flipping
     cardElement.onclick = () => flipCard(cardElement);
     // Display the element within the cardContainer
@@ -128,16 +123,14 @@ function flipCard(e) {
   // If the clicked card is face-down (not-flipped)
   if (e.classList.contains('not-flipped')) {
     // Flip it face-up
-    e.classList.add('bold', 'flipped');
+    e.classList.add('flipped');
     e.innerHTML = `<img src="assets/images/${e.classList[0]}.png" width="100%">`;
     e.classList.remove('not-flipped');
     // Assign its div color attribute as the value we check
     if (cardFirst == null) {
       cardFirst = e.id;
-      console.log(`First Chosen: ${cardFirst}`);
     } else if (cardSecond == null) {
       cardSecond = e.id;
-      console.log(`Second Chosen: ${cardSecond}`);
     }
   }
   // If we have selected 2 cards
@@ -169,8 +162,8 @@ function checkMatch(checkFirst, checkSecond) {
     cardContainer.style.pointerEvents = 'none';
     // Flip them face down again
     setTimeout(() => {
-      cardOne.classList.remove('flipped', 'bold');
-      cardTwo.classList.remove('flipped', 'bold');
+      cardOne.classList.remove('flipped');
+      cardTwo.classList.remove('flipped');
       cardOne.classList.add('not-flipped');
       cardTwo.classList.add('not-flipped');
       cardOne.innerText = ``;
@@ -200,7 +193,7 @@ function checkWin() {
     cardContainer.style.pointerEvents = 'none';
     // Display win message
     score = Math.ceil((matches * 100) / timeCount);
-    winCheck.innerHTML = `<h1>You Win!</h1><br>Score: ${score}`;
+    winCheck.innerHTML = `<h1>You Win!</h1>Score: ${score}`;
     stopTimer();
   }
 }

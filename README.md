@@ -28,10 +28,10 @@ Given that this is a one page project I wanted to focus on presenting a clean an
 ## User Stories
 My focus for this project was on delivering a polished and enjoyable experience to users. As such, these were the main points I considered.
 
-+As a user, I want to be able to quickly understand the premises of the game.
-+As a user, I want to be able to choose a difficulty level I am comfortable with.
-+As a user, I want to be able to understand my progress if I'm doing better than I was before.
-+As a user, I want to be able to change my difficulty whenever I choose.
+ +As a user, I want to be able to quickly understand the premises of the game.
+ +As a user, I want to be able to choose a difficulty level I am comfortable with.
+ +As a user, I want to be able to understand my progress if I'm doing better than I was before.
+ +As a user, I want to be able to change my difficulty whenever I choose.
 
 ## Strategy
 The goal is to make a functional and well presented memory game based on the mana and clan symbols for the popular trading card game, Magic: the Gathering.

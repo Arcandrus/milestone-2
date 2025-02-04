@@ -8,22 +8,41 @@
 
 body {
   background-image: url('../images/background.png');
-  background-color: #cccccc;
+  background-color: #000000;
   background-position: top center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   overflow-x: hidden;
   color: #ffffff;
   font-family: var(--second-font)
 }
 
 #gameContainer {
+  width: 100%;
   text-align: center;
-  align-items: center;
+}
+
+#scoring {
+  margin: 0 auto;
+  width: 80%;
+  height: 120px;
+  text-align: center;
+}
+
+#matchDisplay {
+  text-align: left;
+  align-content: center;
+}
+
+#timerDisplay {
+  text-align: right;
+  align-content: center;
 }
 
 #winDisplay {
-  margin: 20px;
-  text-align: center;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
 }
 
 #buttons {

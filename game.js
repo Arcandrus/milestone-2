@@ -176,8 +176,6 @@ function checkMatch(checkFirst, checkSecond) {
   // Reset chosen cards
   cardFirst = null;
   cardSecond = null;
-  // Log for testing
-  console.log(`Cards Reset: ${cardFirst} , ${cardSecond}`);
 }
 
 // Check if game is won

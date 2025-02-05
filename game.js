@@ -7,6 +7,7 @@ let pairs = 4;
 let timerInterval;
 let timeCount = 0;
 let score = 0;
+let colorblind = 0;
 const cardContainer = document.getElementById('cardContainer');
 const timerDisplay = document.getElementById('timerDisplay');
 const matchDisplay = document.getElementById('matchDisplay');
@@ -116,6 +117,7 @@ function renderCards() {
 }
 
 function flipCard(e) {
+  color = e.classList[0].charAt(0).toUpperCase() + e.classList[0].slice(1);
   // If the card has already been matched or flipped
   if (e.classList.contains('matched') || (e.classList.contains('flipped'))) {
     return;
@@ -124,7 +126,14 @@ function flipCard(e) {
   if (e.classList.contains('not-flipped')) {
     // Flip it face-up
     e.classList.add('flipped');
-    e.innerHTML = `<img src="assets/images/${e.classList[0]}.png">`;
+    // Colorblind Check
+    if (colorblind == 0) {
+      // If colorblind mode is not active, draw images
+      e.innerHTML = `<img src="assets/images/${e.classList[0]}.png">`;
+    } else {
+      // If colorblind mode is active, use text
+      e.innerText = `${color}`;
+    }
     e.classList.remove('not-flipped');
     // Assign its div color attribute as the value we check
     if (cardFirst == null) {
@@ -211,4 +220,18 @@ function timerControl() {
 function stopTimer() {
   clearInterval(timerInterval);
   timerInterval = null;
+}
+
+// Colorblind Checkbox
+function colorblindMode() {
+  checkbox = document.getElementById('colorblind');
+  // If the checkbox is checked
+  if (checkbox.checked) {
+    // Enable Colorblind mode
+    colorblind = 1;
+  // Otherwise
+  } else {
+    // Disable Colorblind mode
+    colorblind = 0;
+  }
 }

@@ -17,11 +17,13 @@
 
   <div id="gameContainer">
     <h1>Magic: the Gathering Memory game!</h1>
+    <!-- Colorblind Checkbox -->
+    <input type="checkbox" id="colorblind" onclick="colorblindMode()"> Colorblind Mode</checkbox>
     <!-- Difficulty Selection -->
     <div id="buttons" class="row">
-      <div id="startEasy" class="button col-3" onclick="startGame('easy')">Easy<Br>4 Pairs</div>
-      <div id="startMedium" class="button col-3" onclick="startGame('medium')">Medium<br>6 Pairs</div>
-      <div id="startHard" class="button col-3" onclick="startGame('hard')">Hard<br>8 Pairs</div>
+      <div id="startEasy" class="easy button col-3" onclick="startGame('easy')">Easy<Br>4 Pairs</div>
+      <div id="startMedium" class="medium button col-3" onclick="startGame('medium')">Medium<br>6 Pairs</div>
+      <div id="startHard" class="hard button col-3" onclick="startGame('hard')">Hard<br>8 Pairs</div>
     </div>
 
     <!-- HUD Container -->

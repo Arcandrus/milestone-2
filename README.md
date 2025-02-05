@@ -70,6 +70,8 @@ Once the player selects thier difficulty, the game and timer starts, generating 
 
 Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken.
 
+I've also added a colorblind mode that replaces the images on the cards with text and makes the buttons all appear in a uniform, high-contrast display.
+
 ## Deployment
 The site has not yet been deployed using [GitPages](https://pages.github.com) in the following way.
 + In the Github repository, the Setting tab.

@@ -225,13 +225,22 @@ function stopTimer() {
 // Colorblind Checkbox
 function colorblindMode() {
   checkbox = document.getElementById('colorblind');
+  easyCb = document.getElementById('startEasy');
+  mediumCb = document.getElementById('startMedium');
+  hardCb = document.getElementById('startHard');
   // If the checkbox is checked
   if (checkbox.checked) {
     // Enable Colorblind mode
     colorblind = 1;
+    easyCb.classList.add('cb');
+    mediumCb.classList.add('cb');
+    hardCb.classList.add('cb');
   // Otherwise
   } else {
     // Disable Colorblind mode
     colorblind = 0;
+    easyCb.classList.remove('cb');
+    mediumCb.classList.remove('cb');
+    hardCb.classList.remove('cb');
   }
 }

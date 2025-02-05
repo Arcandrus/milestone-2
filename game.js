@@ -8,6 +8,7 @@ let timerInterval;
 let timeCount = 0;
 let score = 0;
 let colorblind = 0;
+let difficulty;
 const cardContainer = document.getElementById('cardContainer');
 const timerDisplay = document.getElementById('timerDisplay');
 const matchDisplay = document.getElementById('matchDisplay');
@@ -46,6 +47,8 @@ function startGame(gameMode) {
   renderCards(cards);
   // Start the timer
   timerControl();
+  console.log(gameMode);
+  difficulty = gameMode;
 }
 
 // Generate X number of card pairs
@@ -202,6 +205,7 @@ function checkWin() {
     // Display win message
     score = Math.ceil((matches * 100) / timeCount);
     winCheck.innerHTML = `<h1>You Win!</h1>Score: ${score}`;
+    submitScore(score, difficulty);
     stopTimer();
   }
 }
@@ -236,7 +240,7 @@ function colorblindMode() {
     easyCb.classList.add('cb');
     mediumCb.classList.add('cb');
     hardCb.classList.add('cb');
-  // Otherwise
+    // Otherwise
   } else {
     // Disable Colorblind mode
     colorblind = 0;
@@ -244,4 +248,40 @@ function colorblindMode() {
     mediumCb.classList.remove('cb');
     hardCb.classList.remove('cb');
   }
+}
+
+// Score saving
+function submitScore(score, difficulty) {
+  // Capitalise the first character of the difficulty variable for display
+  difficulty = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
+  // Open modal to enter name
+  saveHighScore = new bootstrap.Modal(document.getElementById('saveHighScore'));
+  scoreToSave = document.getElementById('scoreToSave');
+  // Display score in modal
+  scoreToSave.innerHTML = `On ${difficulty}, you scored <strong>${score}</strong>`;
+  saveHighScore.show();
+}
+
+function saveScore(fName, score, difficulty) {
+  saveHighScore.hide();
+  console.log(fName, score, difficulty);
+  localStorage.setItem("fName", fName);
+  localStorage.setItem("score", score);
+  localStorage.setItem("diff", difficulty);
+}
+
+function displayHighScore() {
+  highScore = new bootstrap.Modal(document.getElementById('displayHighScore'));
+  easyHighScoreDisplay = document.getElementById('easyHighScores');
+  for (var i = 0; i < localStorage.length; i++) {
+    if (localStorage.getItem(localStorage.diff) == 'easy') {
+      let nameElement = document.createElement('div');
+      let scoreElement = document.createElement('div');
+      nameElement.innerText = `${localStorage.getItem(localStorage[i].fName)}`
+      scoreElement.innerText = `${localStorage.getItem(localStorage[i].score)}`
+      easyHighScoreDisplay.appendChild(nameElement, scoreElement);
+    }
+  }
+  highScore.show();
+  localStorage.getItem("fName");
 }

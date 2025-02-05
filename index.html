@@ -24,7 +24,7 @@
       <div id="startEasy" class="easy button col-3" onclick="startGame('easy')">Easy<Br>4 Pairs</div>
       <div id="startMedium" class="medium button col-3" onclick="startGame('medium')">Medium<br>6 Pairs</div>
       <div id="startHard" class="hard button col-3" onclick="startGame('hard')">Hard<br>8 Pairs</div>
-      <div id="highScoreButton" class="highScore button" onclick="displayHighScore()">See
+      <div id="highScoreButton" class="highScore button col-3 col-sm-6" onclick="displayHighScore()">See
         your<br>high scores!</div>
       </button>
     </div>
@@ -46,18 +46,19 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title" id="exampleModalLabel">High Scores!</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <br>
+        <div><p>These are the highest scores set on each difficulty level. Good Job!</p></div>
         <div class="row col-12 modal-body">
           <div class="row">
-            <div class="col-3">Easy</div>
-            <div class="col-3">Medium</div>
-            <div class="col-3">Hard</div>
+            <div class="col-4">Easy</div>
+            <div class="col-4">Medium</div>
+            <div class="col-4">Hard</div>
           </div>
           <div class="row">
-            <div id="easyHighScores" class="col-3"></div>
-            <div id="mediumHighScores" class="col-3"></div>
-            <div id="hardHighScores" class="col-3"></div>
+            <div id="easyHighScores" class="col-4"></div>
+            <div id="mediumHighScores" class="col-4"></div>
+            <div id="hardHighScores" class="col-4"></div>
           </div>
         </div>
         </form>
@@ -71,7 +72,6 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title" id="exampleModalLabel">High Scores!</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="row col-12 modal-body">
           <div class="col-12">First Name:</div>

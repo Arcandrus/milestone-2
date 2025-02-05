@@ -91,8 +91,9 @@ body {
 
 .button.highScore:hover {
   border-radius: 10%;
+  background-color: white;
   color: black;
-  border: solid 2px red;
+  border: solid 2px black;
 }
 
 .cb {

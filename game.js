@@ -233,6 +233,7 @@ function colorblindMode() {
   easyCb = document.getElementById('startEasy');
   mediumCb = document.getElementById('startMedium');
   hardCb = document.getElementById('startHard');
+  scoresCb = document.getElementById('highScoreButton');
   // If the checkbox is checked
   if (checkbox.checked) {
     // Enable Colorblind mode
@@ -240,6 +241,7 @@ function colorblindMode() {
     easyCb.classList.add('cb');
     mediumCb.classList.add('cb');
     hardCb.classList.add('cb');
+    scoresCb.classList.add('cb');
     // Otherwise
   } else {
     // Disable Colorblind mode
@@ -247,6 +249,7 @@ function colorblindMode() {
     easyCb.classList.remove('cb');
     mediumCb.classList.remove('cb');
     hardCb.classList.remove('cb');
+    scoresCb.classList.remove('cb');
   }
 }
 
@@ -264,25 +267,44 @@ function submitScore(score, difficulty) {
 
 // Save High scores
 function saveScore(fName, score, difficulty) {
+  console.log(fName, score, difficulty);
   // Close the Modal
   saveHighScore.hide();
-  // Avoid duplicate values
-  currentHighScore = score;
-  if (currentHighScore < localStorage.getItem('score')) {
-    return;
+
+  switch (difficulty) {
+    case 'easy':
+      if (localStorage.getItem('scoreEasy') > score) {
+        return;
+      }
+      localStorage.setItem('fNameEasy', fName);
+      localStorage.setItem('scoreEasy', score);
+      localStorage.setItem('diffEasy', difficulty);
+      break;
+    case 'medium':
+      if (localStorage.getItem('scoreMedium') > score) {
+        return;
+      }
+      localStorage.setItem('fNameMed', fName);
+      localStorage.setItem('scoreMed', score);
+      localStorage.setItem('diffMed', difficulty);
+      break;
+    case 'hard':
+      if (localStorage.getItem('scoreHard') > score) {
+        return;
+      }
+      localStorage.setItem('fNameHard', fName);
+      localStorage.setItem('scoreHard', score);
+      localStorage.setItem('diffHard', difficulty);
+      break;
   }
-  // Write information to local storage
-  localStorage.setItem('fName', fName);
-  localStorage.setItem('score', score);
-  localStorage.setItem('diff', difficulty);
 }
 
 // Display High Scores
 function displayHighScore() {
+  console.log(localStorage);
   // Open Modal
   highScore = new bootstrap.Modal(document.getElementById('displayHighScore'));
   highScore.show();
-  let scoreElement = document.createElement('div');
   let easyHighScoreDisplay = document.getElementById('easyHighScores');
   let mediumHighScoreDisplay = document.getElementById('mediumHighScores');
   let hardHighScoreDisplay = document.getElementById('hardHighScores');
@@ -294,30 +316,23 @@ function displayHighScore() {
   if (!localStorage.length > 0) {
     return;
     // Otherwise
-  } else {
-    // Define what we are looking for
-    let difficulty = localStorage.getItem('diff');
-    let name = localStorage.getItem('fName');
-    let score = localStorage.getItem('score');
+  } else
     // Find easy high score and display
-    if (difficulty == 'easy') {
-      scoreElement.innerText = `${name} ${score}`;
-      easyHighScoreDisplay.appendChild(scoreElement);
+    if (localStorage.getItem('diffEasy')) {
+      let easyScoreElement = document.createElement('div');
+      easyScoreElement.innerText = `${localStorage.getItem('scoreEasy')} set by ${localStorage.getItem('fNameEasy')}`;
+      easyHighScoreDisplay.appendChild(easyScoreElement);
     }
-    // Find medium high score and display
-    if (difficulty == 'medium') {
-      scoreElement.innerText = `${name} ${score}`
-      mediumHighScoreDisplay.appendChild(scoreElement);
-    }
-    // Find hard high score and display
-    if (difficulty == 'hard') {
-      scoreElement.innerText = `${name} ${score}`
-      hardHighScoreDisplay.appendChild(scoreElement);
-    }
+  // Find medium high score and display
+  if (localStorage.getItem('diffMed')) {
+    let mediumScoreElement = document.createElement('div');
+    mediumScoreElement.innerText = `${localStorage.getItem('scoreMed')} set by ${localStorage.getItem('fNameMed')}`;
+    mediumHighScoreDisplay.appendChild(mediumScoreElement);
   }
-}
-
-// Deleting High Scores
-function deleteHighScore() {
-  localStorage.clear();
+  // Find hard high score and display
+  if (localStorage.getItem('diffHard')) {
+    let hardScoreElement = document.createElement('div');
+    hardScoreElement.innerText = `${localStorage.getItem('scoreHard')} set by ${localStorage.getItem('fNameHard')}`;
+    hardHighScoreDisplay.appendChild(hardScoreElement);
+  }
 }

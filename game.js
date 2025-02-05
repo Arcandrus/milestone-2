@@ -1,3 +1,4 @@
+// Initialise variables
 let cards = [];
 let matches = 0;
 let cardFirst = null;
@@ -14,6 +15,7 @@ const timerDisplay = document.getElementById('timerDisplay');
 const matchDisplay = document.getElementById('matchDisplay');
 const winCheck = document.getElementById('winDisplay');
 
+// Start the game
 function startGame(gameMode) {
   // Reset control variables
   cards = [];
@@ -28,6 +30,7 @@ function startGame(gameMode) {
   matchDisplay.innerText = `Matches: ${matches}`;
   cardContainer.innerHTML = ``;
   winCheck.innerText = ``;
+  // Define card count by difficulty
   switch (gameMode) {
     case 'easy':
       pairs = 4;

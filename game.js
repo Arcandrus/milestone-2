@@ -117,6 +117,7 @@ function renderCards() {
 }
 
 function flipCard(e) {
+  // Get the color name as a string with the first letter capitalised for colorblind mode
   color = e.classList[0].charAt(0).toUpperCase() + e.classList[0].slice(1);
   // If the card has already been matched or flipped
   if (e.classList.contains('matched') || (e.classList.contains('flipped'))) {

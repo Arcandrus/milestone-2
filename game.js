@@ -262,26 +262,62 @@ function submitScore(score, difficulty) {
   saveHighScore.show();
 }
 
+// Save High scores
 function saveScore(fName, score, difficulty) {
+  // Close the Modal
   saveHighScore.hide();
-  console.log(fName, score, difficulty);
-  localStorage.setItem("fName", fName);
-  localStorage.setItem("score", score);
-  localStorage.setItem("diff", difficulty);
+  // Avoid duplicate values
+  currentHighScore = score;
+  if (currentHighScore < localStorage.getItem('score')) {
+    return;
+  }
+  // Write information to local storage
+  localStorage.setItem('fName', fName);
+  localStorage.setItem('score', score);
+  localStorage.setItem('diff', difficulty);
 }
 
+// Display High Scores
 function displayHighScore() {
+  // Open Modal
   highScore = new bootstrap.Modal(document.getElementById('displayHighScore'));
-  easyHighScoreDisplay = document.getElementById('easyHighScores');
-  for (var i = 0; i < localStorage.length; i++) {
-    if (localStorage.getItem(localStorage.diff) == 'easy') {
-      let nameElement = document.createElement('div');
-      let scoreElement = document.createElement('div');
-      nameElement.innerText = `${localStorage.getItem(localStorage[i].fName)}`
-      scoreElement.innerText = `${localStorage.getItem(localStorage[i].score)}`
-      easyHighScoreDisplay.appendChild(nameElement, scoreElement);
+  highScore.show();
+  let scoreElement = document.createElement('div');
+  let easyHighScoreDisplay = document.getElementById('easyHighScores');
+  let mediumHighScoreDisplay = document.getElementById('mediumHighScores');
+  let hardHighScoreDisplay = document.getElementById('hardHighScores');
+  // Clear old information
+  easyHighScoreDisplay.innerHTML = ``;
+  mediumHighScoreDisplay.innerHTML = ``;
+  hardHighScoreDisplay.innerHTML = ``;
+  // If no scores are saved
+  if (!localStorage.length > 0) {
+    return;
+    // Otherwise
+  } else {
+    // Define what we are looking for
+    let difficulty = localStorage.getItem('diff');
+    let name = localStorage.getItem('fName');
+    let score = localStorage.getItem('score');
+    // Find easy high score and display
+    if (difficulty == 'easy') {
+      scoreElement.innerText = `${name} ${score}`;
+      easyHighScoreDisplay.appendChild(scoreElement);
+    }
+    // Find medium high score and display
+    if (difficulty == 'medium') {
+      scoreElement.innerText = `${name} ${score}`
+      mediumHighScoreDisplay.appendChild(scoreElement);
+    }
+    // Find hard high score and display
+    if (difficulty == 'hard') {
+      scoreElement.innerText = `${name} ${score}`
+      hardHighScoreDisplay.appendChild(scoreElement);
     }
   }
-  highScore.show();
-  localStorage.getItem("fName");
+}
+
+// Deleting High Scores
+function deleteHighScore() {
+  localStorage.clear();
 }

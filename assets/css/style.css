@@ -27,7 +27,7 @@ body {
 #scoring {
   margin: 0 auto;
   width: 80%;
-  height: 120px;
+  height: 100px;
   text-align: center;
 }
 
@@ -44,6 +44,7 @@ body {
 }
 
 #winDisplay {
+  height: 100px;
   width: 100%;
   justify-content: center;
   align-content: center;

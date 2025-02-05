@@ -70,6 +70,8 @@ Once the player selects thier difficulty, the game and timer starts, generating 
 
 Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken.
 
+Once the game has been finished, a modal will allow the player to enter thier name, which will be saved locally along with thier score. If a higher score in that difficulty is achieved it will overwrite this value and save the new highest score for each difficulty. This information is stored locally. There is also a button that opens a modal to display the current high scores for each difficulty and who set them.
+
 I've also added a colorblind mode that replaces the images on the cards with text and makes the buttons all appear in a uniform, high-contrast display.
 
 ## Deployment

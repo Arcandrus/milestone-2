@@ -136,10 +136,10 @@ function flipCard(e) {
     // Colorblind Check
     if (colorblind == 0) {
       // If colorblind mode is not active, draw images
-      e.innerHTML = `<img src="assets/images/${e.classList[0]}.png">`;
+      e.innerHTML = `<div height="90%"><img src="assets/images/${e.classList[0]}.png" width="100%"></div>`;
     } else {
-      // If colorblind mode is active, use text
-      e.innerText = `${color}`;
+      // If colorblind mode is active, use image and text
+      e.innerHTML = `<div height="90%"><img src="assets/images/${e.classList[0]}.png" width="100%"></div>${color}`;
     }
     e.classList.remove('not-flipped');
     // Assign its div color attribute as the value we check

@@ -214,6 +214,7 @@ function checkWin() {
 //Timer control
 function timerControl() {
   stopTimer();
+  timeCount = 0;
   // Start the timer only if not already running
   if (!timerInterval) {
     timerInterval = setInterval(() => {

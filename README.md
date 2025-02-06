@@ -3,14 +3,14 @@ Code Institute Project Milestone 2 - Interactive Front End Development
 
 ## Table of Contents
 
-1 [Live Demo](#demo)
-2 [User Stories](#user-stories)
-3 [Design](#design)
-4 [Technologies](#technologies)
-5 [Features](#features)
-6 [Deployment](#deployment)
-7 [Testing](#testing)
-8 [Credits](#credits)
+1. [Live Demo](#demo)
+2. [User Stories](#user-stories)
+3. [Design](#design)
+4. [Technologies](#technologies)
+5. [Features](#features)
+6. [Deployment](#deployment)
+7. [Testing](#testing)
+8. [Credits](#credits)
 
 ![](./readme-assets/responsive_ui.png)
 
@@ -71,7 +71,12 @@ The site has not yet been deployed using [GitPages](https://pages.github.com) in
 + The deployed site will update automatically upon new commits to the master branch.
 
 ## Testing
-**HTML** Tested and passed by [W3C Validator](./readme-assets/html_pass.png)
+
+<details open>
+<summary>**HTML** Tested and passed by W3C Validator</summary>
+<br>
+![W3C Validator](./readme-assets/html_pass.png)
+</details>
 
 **CSS** Tested and passed by [Jigsaw Validator](./readme-assets/css_pass.png)
 

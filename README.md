@@ -72,10 +72,11 @@ The site has not yet been deployed using [GitPages](https://pages.github.com) in
 
 ## Testing
 
-<details open>
+<details>
 <summary>**HTML** Tested and passed by W3C Validator</summary>
-<br>
-![W3C Validator](./readme-assets/html_pass.png)
+
+![](./readme-assets/html_pass.png)
+
 </details>
 
 **CSS** Tested and passed by [Jigsaw Validator](./readme-assets/css_pass.png)

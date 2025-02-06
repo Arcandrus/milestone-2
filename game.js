@@ -22,6 +22,7 @@ function startGame(gameMode) {
   matches = 0;
   cardFirst = null;
   cardSecond = null;
+  timeCount = 0;
   score = 0;
   cardContainer.style.pointerEvents = 'auto';
   // Reset the UI

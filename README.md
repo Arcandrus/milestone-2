@@ -83,12 +83,20 @@ The site has not yet been deployed using [GitPages](https://pages.github.com) in
 + On the top of the page, the link to the complete website is provided.
 + The deployed site will update automatically upon new commits to the master branch.
 
-## Validator Testing
+## Testing
 **HTML** Tested and passed by [W3C Validator](./readme-assets/html_pass.png)
 
 **CSS** Tested and passed by [Jigsaw Validator](./readme-assets/css_pass.png)
 
 **Accessibility** Tested and passed by [Lighthouse DevTools](./readme-assets/lighthouse.png)
+
+# Manual Testing
+
+| Feature | Expectation | Action | Result |
+| ---------- | ---------- | ------------ | ----------- |
+|Starting a new game|The game will generate the right amount of cards given the chosen difficulty.|Clicking the chosen button|Working as intended|
+|Coffee      | Coffee     | Coffee       | Coffee      |
+|Shiba Inu   | Shiba Inu  | Shiba Inu    | Shiba Inu   |
 
 I have also asked several users to explore the website on different devices including iPhone 14, iPad, Oppo mobile devices, Sony mobile devices and several different PC and Laptop setups to ensure consitency and usability across multiple platforms.  
 

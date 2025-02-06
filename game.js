@@ -23,6 +23,7 @@ function startGame(gameMode) {
   cardFirst = null;
   cardSecond = null;
   score = 0;
+  timeCount = 0;
   cardContainer.style.pointerEvents = 'auto';
   // Reset the UI
   timerDisplay.innerText = `Time: ${timeCount}s`;
@@ -213,8 +214,6 @@ function checkWin() {
 
 //Timer control
 function timerControl() {
-  stopTimer();
-  timeCount = 0;
   // Start the timer only if not already running
   if (!timerInterval) {
     timerInterval = setInterval(() => {

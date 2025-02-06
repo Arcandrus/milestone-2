@@ -71,17 +71,26 @@ The site has not yet been deployed using [GitPages](https://pages.github.com) in
 + The deployed site will update automatically upon new commits to the master branch.
 
 ## Testing
-
+**HTML**
 <details>
-<summary>**HTML** Tested and passed by W3C Validator</summary>
+<summary>Tested and passed by W3C Validator</summary>
 
 ![](./readme-assets/html_pass.png)
-
 </details>
 
-**CSS** Tested and passed by [Jigsaw Validator](./readme-assets/css_pass.png)
+**CSS**
+<details>
+<summary>Tested and passed by Jigsaw Validator</summary>
 
-**Accessibility** Tested and passed by [Lighthouse DevTools](./readme-assets/lighthouse.png)
+![](./readme-assets/css_pass.png)
+</details>
+
+**Accessibility**
+<details>
+<summary>Tested and passed by Lighthouse DevTools</summary>
+
+![](./readme-assets/lighthouse.png)
+</details>
 
 ### Manual Testing
 

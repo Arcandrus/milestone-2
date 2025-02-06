@@ -90,13 +90,15 @@ The site has not yet been deployed using [GitPages](https://pages.github.com) in
 
 **Accessibility** Tested and passed by [Lighthouse DevTools](./readme-assets/lighthouse.png)
 
-# Manual Testing
+### Manual Testing
 
 | Feature | Expectation | Action | Result |
 | ---------- | ---------- | ------------ | ----------- |
 |Starting a new game|The game will generate the right amount of cards given the chosen difficulty.|Clicking the chosen button|Working as intended|
 |Displaying High Scores|A modal reading data from localStorage will display the high scores in a modal window.|Clicking the high score button|Working as intended|
 |Timer|Timer increments each second and displays this to the user.|Game start|Working as intended|
+|Matches|Each time a match is found, the counter increments and displays this to the user.|When a mactch is found|Working as intended|
+|Score calculation|The user score is calculated using this equation, score = Math.ceil((matches * 100) / timeCount); generating a higher score for faster completion.|Game Completion|Working as intended|
 
 I have also asked several users to explore the website on different devices including iPhone 14, iPad, Oppo mobile devices, Sony mobile devices and several different PC and Laptop setups to ensure consitency and usability across multiple platforms.  
 

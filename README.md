@@ -14,7 +14,7 @@ Code Institute Project Milestone 2 - Interactive Front End Development
 + [Technologies](#technologies)
 + [Features](#features)
 + [Deployment](#deployment)
-+ [Validator Testing](#validator-testing)
++ [Testing](#testing)
 + [Credits](#credits)
 
 ![](./readme-assets/responsive_ui.png)
@@ -95,8 +95,8 @@ The site has not yet been deployed using [GitPages](https://pages.github.com) in
 | Feature | Expectation | Action | Result |
 | ---------- | ---------- | ------------ | ----------- |
 |Starting a new game|The game will generate the right amount of cards given the chosen difficulty.|Clicking the chosen button|Working as intended|
-|Coffee      | Coffee     | Coffee       | Coffee      |
-|Shiba Inu   | Shiba Inu  | Shiba Inu    | Shiba Inu   |
+|Displaying High Scores|A modal reading data from localStorage will display the high scores in a modal window.|Clicking the high score button|Working as intended|
+|Timer|Timer increments each second and displays this to the user.|Game start|Working as intended|
 
 I have also asked several users to explore the website on different devices including iPhone 14, iPad, Oppo mobile devices, Sony mobile devices and several different PC and Laptop setups to ensure consitency and usability across multiple platforms.  
 

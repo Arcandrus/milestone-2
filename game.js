@@ -22,7 +22,6 @@ function startGame(gameMode) {
   matches = 0;
   cardFirst = null;
   cardSecond = null;
-  timeCount = 0;
   score = 0;
   cardContainer.style.pointerEvents = 'auto';
   // Reset the UI
@@ -214,6 +213,7 @@ function checkWin() {
 
 //Timer control
 function timerControl() {
+  stopTimer();
   // Start the timer only if not already running
   if (!timerInterval) {
     timerInterval = setInterval(() => {

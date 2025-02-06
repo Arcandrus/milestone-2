@@ -267,72 +267,43 @@ function submitScore(score, difficulty) {
   saveHighScore.show();
 }
 
-// Save High scores
+// Save High Scores (Top 5 for Each Difficulty)
 function saveScore(fName, score, difficulty) {
-  // Close the Modal
   saveHighScore.hide();
-
-  switch (difficulty) {
-    case 'easy':
-      if (localStorage.getItem('scoreEasy') > score) {
-        return;
-      }
-      localStorage.setItem('fNameEasy', fName);
-      localStorage.setItem('scoreEasy', score);
-      localStorage.setItem('diffEasy', difficulty);
-      break;
-    case 'medium':
-      if (localStorage.getItem('scoreMedium') > score) {
-        return;
-      }
-      localStorage.setItem('fNameMed', fName);
-      localStorage.setItem('scoreMed', score);
-      localStorage.setItem('diffMed', difficulty);
-      break;
-    case 'hard':
-      if (localStorage.getItem('scoreHard') > score) {
-        return;
-      }
-      localStorage.setItem('fNameHard', fName);
-      localStorage.setItem('scoreHard', score);
-      localStorage.setItem('diffHard', difficulty);
-      break;
-  }
+  const key = `scores${difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}`;
+  // Get existing scores or initialize an empty array
+  const scores = JSON.parse(localStorage.getItem(key)) || [];
+  // Add the new score
+  scores.push({ fName, score });
+  // Sort scores in descending order and keep only the top 5
+  scores.sort((a, b) => b.score - a.score);
+  const top5Scores = scores.slice(0, 5);
+  // Save back to localStorage
+  localStorage.setItem(key, JSON.stringify(top5Scores));
 }
 
-// Display High Scores
+// Display High Scores (Top 5 for Each Difficulty)
 function displayHighScore() {
-  // Open Modal
   highScore = new bootstrap.Modal(document.getElementById('displayHighScore'));
   highScore.show();
-  let easyHighScoreDisplay = document.getElementById('easyHighScores');
-  let mediumHighScoreDisplay = document.getElementById('mediumHighScores');
-  let hardHighScoreDisplay = document.getElementById('hardHighScores');
+  const difficulty = ['Easy', 'Medium', 'Hard'];
+  const highScoreDisplays = {
+    Easy: document.getElementById('easyHighScores'),
+    Medium: document.getElementById('mediumHighScores'),
+    Hard: document.getElementById('hardHighScores'),
+  };
   // Clear old information
-  easyHighScoreDisplay.innerHTML = ``;
-  mediumHighScoreDisplay.innerHTML = ``;
-  hardHighScoreDisplay.innerHTML = ``;
-  // If no scores are saved
-  if (!localStorage.length > 0) {
-    return;
-    // Otherwise
-  } else
-    // Find easy high score and display
-    if (localStorage.getItem('diffEasy')) {
-      let easyScoreElement = document.createElement('div');
-      easyScoreElement.innerText = `${localStorage.getItem('scoreEasy')} set by ${localStorage.getItem('fNameEasy')}`;
-      easyHighScoreDisplay.appendChild(easyScoreElement);
-    }
-  // Find medium high score and display
-  if (localStorage.getItem('diffMed')) {
-    let mediumScoreElement = document.createElement('div');
-    mediumScoreElement.innerText = `${localStorage.getItem('scoreMed')} set by ${localStorage.getItem('fNameMed')}`;
-    mediumHighScoreDisplay.appendChild(mediumScoreElement);
-  }
-  // Find hard high score and display
-  if (localStorage.getItem('diffHard')) {
-    let hardScoreElement = document.createElement('div');
-    hardScoreElement.innerText = `${localStorage.getItem('scoreHard')} set by ${localStorage.getItem('fNameHard')}`;
-    hardHighScoreDisplay.appendChild(hardScoreElement);
-  }
+  difficulty.forEach(diff => {
+    highScoreDisplays[diff].innerHTML = '';
+  });
+  // Populate high scores
+  difficulty.forEach(diff => {
+    const key = `scores${diff}`;
+    const scores = JSON.parse(localStorage.getItem(key)) || [];
+    scores.forEach((entry, index) => {
+      const scoreElement = document.createElement('div');
+      scoreElement.innerText = `${index + 1}. ${entry.fName} ${entry.score}`;
+      highScoreDisplays[diff].appendChild(scoreElement);
+    });
+  });
 }

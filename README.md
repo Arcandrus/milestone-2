@@ -106,7 +106,7 @@ All these features were manually tested by me and several others, these are the 
 |Matches|Each time a match is found, the counter increments and displays this to the user.|When a mactch is found|Working as intended|
 |Score calculation|The user score is calculated using this equation, score = Math.ceil((matches * 100) / timeCount); generating a higher score for faster completion.|Game Completion|Working as intended|
 |Score saving|The user score saved into localStorage by entering thier name in a modal after the game is completed.|Game Completion|Working as intended|
-|Displaying top 5 Scores for each difficulty|A modal reading data from localStorage will display the top 5 high scores for each difficulty in a modal window.|Clicking the high score button|Not yet implemented|
+|Displaying top 5 Scores for each difficulty|A modal reading data from localStorage will display the top 5 high scores for each difficulty in a modal window.|Clicking the high score button|Working as Intended|
 
 While developing this project, I mainly relied on console.log() and devtools to help me with troubleshooting and bug fixing.
 

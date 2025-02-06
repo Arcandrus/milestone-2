@@ -98,6 +98,7 @@ All these features were manually tested by me and several others, these are the 
 | ---------- | ---------- | ------------ | ----------- |
 |Starting a new game|The game will generate the right amount of cards given the chosen difficulty.|Clicking the chosen button|Working as intended|
 |Displaying High Scores|A modal reading data from localStorage will display the high scores in a modal window.|Clicking the high score button|Working as intended|
+|Colorblind Mode|When enabled, the colored buttons at the top of the screen are redesigned to be high-contrast and the card images feature a text description.|Clicking the "Colorblind Mode" checkbox|Working as intended|
 |Card Flipping|When a user clicks on a chosen card, it flips to reveal its image.|Clicking on a card|Working as intended|
 |Card Matching|When a user clicks on a second chosen card, it flips to reveal its image. The game then tests them against eachother to see if a match has occured.|Clicking on a second card|Working as intended|
 |Card Resetting|When a user clicks on a second chosen card, it flips to reveal its image. If the two chosen cards do not match the game resets them to face-down after a 1sec delay.|Clicking on a second card|Working as intended|

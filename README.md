@@ -3,14 +3,14 @@ Code Institute Project Milestone 2 - Interactive Front End Development
 
 ## Table of Contents
 
-+ [Live Demo](#demo)
-+ [User Stories](#user-stories)
-+ [Design](#design)
-+ [Technologies](#technologies)
-+ [Features](#features)
-+ [Deployment](#deployment)
-+ [Testing](#testing)
-+ [Credits](#credits)
+1 [Live Demo](#demo)
+2 [User Stories](#user-stories)
+3 [Design](#design)
+4 [Technologies](#technologies)
+5 [Features](#features)
+6 [Deployment](#deployment)
+7 [Testing](#testing)
+8 [Credits](#credits)
 
 ![](./readme-assets/responsive_ui.png)
 

@@ -92,13 +92,20 @@ The site has not yet been deployed using [GitPages](https://pages.github.com) in
 
 ### Manual Testing
 
+All these features were manually tested by me and several others, these are the results of those tests.
+
 | Feature | Expectation | Action | Result |
 | ---------- | ---------- | ------------ | ----------- |
 |Starting a new game|The game will generate the right amount of cards given the chosen difficulty.|Clicking the chosen button|Working as intended|
 |Displaying High Scores|A modal reading data from localStorage will display the high scores in a modal window.|Clicking the high score button|Working as intended|
+|Card Flipping|When a user clicks on a chosen card, it flips to reveal its image.|Clicking on a card|Working as intended|
+|Card Matching|When a user clicks on a second chosen card, it flips to reveal its image. The game then tests them against eachother to see if a match has occured.|Clicking on a second card|Working as intended|
+|Card Resetting|When a user clicks on a second chosen card, it flips to reveal its image. If the two chosen cards do not match the game resets them to face-down after a 1sec delay.|Clicking on a second card|Working as intended|
 |Timer|Timer increments each second and displays this to the user.|Game start|Working as intended|
 |Matches|Each time a match is found, the counter increments and displays this to the user.|When a mactch is found|Working as intended|
 |Score calculation|The user score is calculated using this equation, score = Math.ceil((matches * 100) / timeCount); generating a higher score for faster completion.|Game Completion|Working as intended|
+|Score saving|The user score saved into localStorage by entering thier name in a modal after the game is completed.|Game Completion|Working as intended|
+|Displaying top 5 Scores for each difficulty|A modal reading data from localStorage will display the top 5 high scores for each difficulty in a modal window.|Clicking the high score button|Not yet implemented|
 
 I have also asked several users to explore the website on different devices including iPhone 14, iPad, Oppo mobile devices, Sony mobile devices and several different PC and Laptop setups to ensure consitency and usability across multiple platforms.  
 

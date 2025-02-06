@@ -95,6 +95,8 @@ All these features were manually tested by me and several others, these are the 
 |Score saving|The user score saved into localStorage by entering thier name in a modal after the game is completed.|Game Completion|Working as intended|
 |Displaying top 5 Scores for each difficulty|A modal reading data from localStorage will display the top 5 high scores for each difficulty in a modal window.|Clicking the high score button|Not yet implemented|
 
+While developing this project, I mainly relied on console.log() and devtools to help me with troubleshooting and bug fixing.
+
 I have also asked several users to explore the website on different devices including iPhone 14, iPad, Oppo mobile devices, Sony mobile devices and several different PC and Laptop setups to ensure consitency and usability across multiple platforms.  
 
 ## Credits

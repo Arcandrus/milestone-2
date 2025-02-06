@@ -3,14 +3,14 @@ Code Institute Project Milestone 2 - Interactive Front End Development
 
 ## Table of Contents
 
-+ [Live Demo](#demo)
-+ [User Stories](#user-stories)
-+ [Design](#design)
-+ [Technologies](#technologies)
-+ [Features](#features)
-+ [Deployment](#deployment)
-+ [Testing](#testing)
-+ [Credits](#credits)
+1. [Live Demo](#demo)
+2. [User Stories](#user-stories)
+3. [Design](#design)
+4. [Technologies](#technologies)
+5. [Features](#features)
+6. [Deployment](#deployment)
+7. [Testing](#testing)
+8. [Credits](#credits)
 
 ![](./readme-assets/responsive_ui.png)
 
@@ -71,11 +71,24 @@ The site has not yet been deployed using [GitPages](https://pages.github.com) in
 + The deployed site will update automatically upon new commits to the master branch.
 
 ## Testing
-**HTML** Tested and passed by [W3C Validator](./readme-assets/html_pass.png)
 
-**CSS** Tested and passed by [Jigsaw Validator](./readme-assets/css_pass.png)
+<details>
+<summary>HTML Tested and passed by W3C Validator</summary>
 
-**Accessibility** Tested and passed by [Lighthouse DevTools](./readme-assets/lighthouse.png)
+![](./readme-assets/html_pass.png)
+</details>
+
+<details>
+<summary>CSS Tested and passed by Jigsaw Validator</summary>
+
+![](./readme-assets/css_pass.png)
+</details>
+
+<details>
+<summary>Accessibility Tested and passed by Lighthouse DevTools</summary>
+
+![](./readme-assets/lighthouse.png)
+</details>
 
 ### Manual Testing
 

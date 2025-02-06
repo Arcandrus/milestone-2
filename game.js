@@ -50,7 +50,6 @@ function startGame(gameMode) {
   renderCards(cards);
   // Start the timer
   timerControl();
-  console.log(gameMode);
   difficulty = gameMode;
 }
 
@@ -136,10 +135,10 @@ function flipCard(e) {
     // Colorblind Check
     if (colorblind == 0) {
       // If colorblind mode is not active, draw images
-      e.innerHTML = `<div height="90%"><img src="assets/images/${e.classList[0]}.png" width="100%"></div>`;
+      e.innerHTML = `<img src="assets/images/${e.classList[0]}.png" width="90%">`;
     } else {
       // If colorblind mode is active, use image and text
-      e.innerHTML = `<div height="90%"><img src="assets/images/${e.classList[0]}.png" width="100%"></div>${color}`;
+      e.innerHTML = `<img src="assets/images/${e.classList[0]}.png" width="80%"><div>${color}</div>`;
     }
     e.classList.remove('not-flipped');
     // Assign its div color attribute as the value we check
@@ -270,7 +269,6 @@ function submitScore(score, difficulty) {
 
 // Save High scores
 function saveScore(fName, score, difficulty) {
-  console.log(fName, score, difficulty);
   // Close the Modal
   saveHighScore.hide();
 
@@ -304,7 +302,6 @@ function saveScore(fName, score, difficulty) {
 
 // Display High Scores
 function displayHighScore() {
-  console.log(localStorage);
   // Open Modal
   highScore = new bootstrap.Modal(document.getElementById('displayHighScore'));
   highScore.show();

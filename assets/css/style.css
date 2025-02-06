@@ -120,11 +120,8 @@ h1 {
 }
 
 .card {
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-  align-content: center;
   justify-content: center;
+  align-items: center;
 }
 
 /* Layout control */
@@ -160,7 +157,6 @@ h1 {
 #submitScore {
   text-align: center;
   justify-content: center;
-  align-items: center;
 }
 
 /* Smaller devices (landscape phones, 575px and below) */

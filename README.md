@@ -62,28 +62,41 @@ Once the player selects thier difficulty, the game and timer starts, generating 
 **Card Flipping**
 The player must then chose which cards they wish to check for a match. Once two cards are chosen the game will check if they match and proceed by either keeping the cards displayed, or flipping them face down to try again.
 
-Cards being matched (the gif repeats but in the game the matched pair remain visable) ![](./readme-assets/card_match.gif)
+Cards being matched (the gif repeats but in the game the matched pair remain visable) 
 
-Cards do not match ![](./readme-assets/card_no_match.gif)
+![](./readme-assets/card_match.gif)
+
+Cards do not match 
+
+![](./readme-assets/card_no_match.gif)
 
 **Winning the Game**
 Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken, then a modal will allow the player to enter thier name, which will be saved locally along with thier score. This information is stored locally. 
 
-Save score modal ![](./readme-assets/save_score_modal.png)
+Save score modal 
+
+![](./readme-assets/save_score_modal.png)
 
 There is also a button that opens a modal to display the current high scores for each difficulty and who set them. This modal also gives the option to reset the high scores.
 
-High score modal ![](./readme-assets/high_score_modal.png)
+High score modal 
+
+![](./readme-assets/high_score_modal.png)
 
 
 **Colorblind Mode**
 I've also added a colorblind mode that add description text to the images on the cards makes the buttons all appear in a uniform, high-contrast display.
 
 Difficulty buttons with colorblind mode on
+
 ![](./readme-assets/diff_buttons_cb.png)
+
 Standard card display
+
 ![](./readme-assets/card.png)
+
 Colorblind card display
+
 ![](./readme-assets/card_cb.png)
 
 ## Deployment

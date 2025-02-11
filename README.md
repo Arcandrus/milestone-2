@@ -62,7 +62,8 @@ Once the player selects thier difficulty, the game and timer starts, generating 
 **Card Flipping**
 The player must then chose which cards they wish to check for a match. Once two cards are chosen the game will check if they match and proceed by either keeping the cards displayed, or flipping them face down to try again.
 
-Cards being matched ![](./readme-assets/card_match.gif)
+Cards being matched (the gif repeats but in the game the matched pair remain visable) ![](./readme-assets/card_match.gif)
+
 Cards do not match ![](./readme-assets/card_no_match.gif)
 
 **Winning the Game**
@@ -74,7 +75,16 @@ There is also a button that opens a modal to display the current high scores for
 
 High score modal ![](./readme-assets/high_score_modal.png)
 
-I've also added a colorblind mode that replaces the images on the cards with text and makes the buttons all appear in a uniform, high-contrast display.
+
+**Colorblind Mode**
+I've also added a colorblind mode that add description text to the images on the cards makes the buttons all appear in a uniform, high-contrast display.
+
+Difficulty buttons with colorblind mode on
+![](./readme-assets/diff_buttons_cb.png)
+Standard card display
+![](./readme-assets/card.png)
+Colorblind card display
+![](./readme-assets/card_cb.png)
 
 ## Deployment
 The site has not yet been deployed using [GitPages](https://pages.github.com) in the following way.

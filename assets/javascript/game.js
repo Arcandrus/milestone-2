@@ -274,7 +274,7 @@ function saveScore(fName, score, difficulty) {
   // Get existing scores or initialize an empty array
   const scores = JSON.parse(localStorage.getItem(key)) || [];
   // Add the new score
-  scores.push({fName, score});
+  scores.push({ fName, score });
   // Sort scores in descending order and keep only the top 5
   scores.sort((a, b) => b.score - a.score);
   const top5Scores = scores.slice(0, 5);
@@ -306,4 +306,11 @@ function displayHighScore() {
       highScoreDisplays[diff].appendChild(scoreElement);
     });
   });
+}
+
+// Reset the highscores
+function resetHighScores() {
+  highScore.hide();
+  localStorage.clear();
+  alert("High scores have been reset.");
 }

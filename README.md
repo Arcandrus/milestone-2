@@ -49,6 +49,7 @@ I used a very simple color scheme based on the background image I'm using which 
 # Features
 
 **Difficulty Options**
+
 The game features a choice of three difficulty levels;
 
 ![](./readme-assets/diff_buttons.png)
@@ -60,6 +61,7 @@ The game features a choice of three difficulty levels;
 Once the player selects thier difficulty, the game and timer starts, generating the chosen amount of pairs from an array of possibilities. 
 
 **Card Flipping**
+
 The player must then chose which cards they wish to check for a match. Once two cards are chosen the game will check if they match and proceed by either keeping the cards displayed, or flipping them face down to try again.
 
 Cards being matched (the gif repeats but in the game the matched pair remain visable) 
@@ -71,6 +73,7 @@ Cards do not match
 ![](./readme-assets/card_no_match.gif)
 
 **Winning the Game**
+
 Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken, then a modal will allow the player to enter thier name, which will be saved locally along with thier score. This information is stored locally. Save score modal shown below.
 
 ![](./readme-assets/save_score_modal.png)
@@ -82,13 +85,13 @@ There is also a button that opens a modal to display the current high scores for
 
 **Colorblind Mode**
 
-I've also added a colorblind mode that add description text to the images on the cards makes the buttons all appear in a uniform, high-contrast display. Difficulty buttons with colorblind mode on shown below.
+I've also added a colorblind mode that add description text to the images on the cards makes the buttons all appear in a uniform, high-contrast display. Difficulty buttons with colorblind mode on and a comparison of the standard and colorblind card display are shown below.
 
 ![](./readme-assets/diff_buttons_cb.png)
 
 | Standard  | Colorblind |
 | ---------- | ---------- |
-|![](./readme-assets/card.png)|![](./readme-assets/card_cb.png).|
+|![](./readme-assets/card.png)|![](./readme-assets/card_cb.png)|
 
 ## Deployment
 The site has not yet been deployed using [GitPages](https://pages.github.com) in the following way.
@@ -132,7 +135,7 @@ All these features were manually tested by me and several others, these are the 
 |Card Matching|When a user clicks on a second chosen card, it flips to reveal its image. The game then tests them against eachother to see if a match has occured.|Clicking on a second card|Working as intended|
 |Card Resetting|When a user clicks on a second chosen card, it flips to reveal its image. If the two chosen cards do not match the game resets them to face-down after a 1sec delay.|Clicking on a second card|Working as intended|
 |Timer|Timer increments each second and displays this to the user.|Game start|Working as intended|
-|Matches|Each time a match is found, the counter increments and displays this to the user.|When a mactch is found|Working as intended|
+|Matches|Each time a match is found, the counter increments and displays this to the user.|When a match is found|Working as intended|
 |Score calculation|The user score is calculated using this equation, score = Math.ceil((matches * 100) / timeCount); generating a higher score for faster completion.|Game Completion|Working as intended|
 |Score saving|The user score saved into localStorage by entering thier name in a modal after the game is completed.|Game Completion|Working as intended|
 |Displaying top 5 Scores for each difficulty|A modal reading data from localStorage will display the top 5 high scores for each difficulty in a modal window.|Clicking the high score button|Working as Intended|

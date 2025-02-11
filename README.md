@@ -48,7 +48,7 @@ I used a very simple color scheme based on the background image I'm using which 
 
 # Features
 
-**Difficulty Options**
+###Difficulty Options
 
 The game features a choice of three difficulty levels;
 
@@ -60,7 +60,7 @@ The game features a choice of three difficulty levels;
 
 Once the player selects thier difficulty, the game and timer starts, generating the chosen amount of pairs from an array of possibilities. 
 
-**Card Flipping**
+###Card Flipping
 
 The player must then chose which cards they wish to check for a match. Once two cards are chosen the game will check if they match and proceed by either keeping the cards displayed, or flipping them face down to try again.
 
@@ -72,7 +72,7 @@ Cards do not match
 
 ![](./readme-assets/card_no_match.gif)
 
-**Winning the Game**
+###Winning the Game
 
 Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken, then a modal will allow the player to enter thier name, which will be saved locally along with thier score. Save score modal shown below.
 
@@ -83,7 +83,7 @@ There is also a button that opens a modal to display the current high scores for
 ![](./readme-assets/high_score_modal.png)
 
 
-**Colorblind Mode**
+###Colorblind Mode
 
 I've also added a colorblind mode that add description text to the images on the cards makes the buttons all appear in a uniform, high-contrast display. Difficulty buttons with colorblind mode on and a comparison of the standard and colorblind card display are shown below.
 
@@ -139,6 +139,7 @@ All these features were manually tested by me and several others, these are the 
 |Score calculation|The user score is calculated using this equation, score = Math.ceil((matches * 100) / timeCount); generating a higher score for faster completion.|Game Completion|Working as intended|
 |Score saving|The user score saved into localStorage by entering thier name in a modal after the game is completed.|Game Completion|Working as intended|
 |Displaying top 5 Scores for each difficulty|A modal reading data from localStorage will display the top 5 high scores for each difficulty in a modal window.|Clicking the high score button|Working as Intended|
+|Reastting the high scores|A button in the high scores window will allow the user to reset the local high score values.|Clicking the reset button within the high score modal|Working as Intended|
 
 While developing this project, I mainly relied on console.log() and devtools to help me with troubleshooting and bug fixing.
 

@@ -71,33 +71,24 @@ Cards do not match
 ![](./readme-assets/card_no_match.gif)
 
 **Winning the Game**
-Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken, then a modal will allow the player to enter thier name, which will be saved locally along with thier score. This information is stored locally. 
-
-Save score modal 
+Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken, then a modal will allow the player to enter thier name, which will be saved locally along with thier score. This information is stored locally. Save score modal shown below.
 
 ![](./readme-assets/save_score_modal.png)
 
-There is also a button that opens a modal to display the current high scores for each difficulty and who set them. This modal also gives the option to reset the high scores.
-
-High score modal 
+There is also a button that opens a modal to display the current high scores for each difficulty and who set them. This modal also gives the option to reset the high scores. High score modal shown below.
 
 ![](./readme-assets/high_score_modal.png)
 
 
 **Colorblind Mode**
-I've also added a colorblind mode that add description text to the images on the cards makes the buttons all appear in a uniform, high-contrast display.
 
-Difficulty buttons with colorblind mode on
+I've also added a colorblind mode that add description text to the images on the cards makes the buttons all appear in a uniform, high-contrast display. Difficulty buttons with colorblind mode on shown below.
 
 ![](./readme-assets/diff_buttons_cb.png)
 
-Standard card display
-
-![](./readme-assets/card.png)
-
-Colorblind card display
-
-![](./readme-assets/card_cb.png)
+| Standard  | Colorblind |
+| ---------- | ---------- |
+|![](./readme-assets/card.png)|![](./readme-assets/card_cb.png).|
 
 ## Deployment
 The site has not yet been deployed using [GitPages](https://pages.github.com) in the following way.

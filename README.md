@@ -74,7 +74,7 @@ Cards do not match
 
 **Winning the Game**
 
-Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken, then a modal will allow the player to enter thier name, which will be saved locally along with thier score. This information is stored locally. Save score modal shown below.
+Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken, then a modal will allow the player to enter thier name, which will be saved locally along with thier score. Save score modal shown below.
 
 ![](./readme-assets/save_score_modal.png)
 

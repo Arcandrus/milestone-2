@@ -62,13 +62,7 @@ Once the player selects thier difficulty, the game and timer starts, generating 
 
 ### Card Flipping
 
-The player must then chose which cards they wish to check for a match. Once two cards are chosen the game will check if they match and proceed by either keeping the cards displayed, or flipping them face down to try again.
-
-Cards being matched (the gif repeats but in the game the matched pair remain visable) 
-
-![](./readme-assets/card_match.gif)
-
-Cards do not match 
+The player must then chose which cards they wish to check for a match. Once two cards are chosen the game will check if they match and proceed by either keeping the cards displayed, or flipping them face down to try again. An example of two not matching cards is shown below. 
 
 ![](./readme-assets/card_no_match.gif)
 

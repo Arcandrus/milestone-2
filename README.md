@@ -47,6 +47,8 @@ I used a very simple color scheme based on the background image I'm using which 
 **Bootstrap** - To ensure responsive design and usability across all devices.
 
 # Features
+
+**Difficulty Options**
 The game features a choice of three difficulty levels;
 
 ![](./readme-assets/diff_buttons.png)
@@ -55,14 +57,22 @@ The game features a choice of three difficulty levels;
 + Medium, the player is required to find 6 pairs as quickly as possible.
 + Hard, the player is required to find 8 pairs as quickly as possible.
 
-Once the player selects thier difficulty, the game and timer starts, generating the chosen amount of pairs from an array of possibilities. The player must then chose which cards they wish to check for a match. Once two cards are chosen the game will check if they match and proceed by either keeping the cards displayed, or flipping them face down to try again.
+Once the player selects thier difficulty, the game and timer starts, generating the chosen amount of pairs from an array of possibilities. 
 
-Cards being matched[](./readme-assets/card_match.gif)
-Cards do not match[](./readme-assets/card_no_match.gif)
+**Card Flipping**
+The player must then chose which cards they wish to check for a match. Once two cards are chosen the game will check if they match and proceed by either keeping the cards displayed, or flipping them face down to try again.
 
-Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken.
+Cards being matched ![](./readme-assets/card_match.gif)
+Cards do not match ![](./readme-assets/card_no_match.gif)
 
-Once the game has been finished, a modal will allow the player to enter thier name, which will be saved locally along with thier score. If a higher score in that difficulty is achieved it will overwrite this value and save the new highest score for each difficulty. This information is stored locally. There is also a button that opens a modal to display the current high scores for each difficulty and who set them.
+**Winning the Game**
+Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken, then a modal will allow the player to enter thier name, which will be saved locally along with thier score. This information is stored locally. 
+
+Save score modal ![](./readme-assets/save_score_modal.png)
+
+There is also a button that opens a modal to display the current high scores for each difficulty and who set them. This modal also gives the option to reset the high scores.
+
+High score modal ![](./readme-assets/high_score_modal.png)
 
 I've also added a colorblind mode that replaces the images on the cards with text and makes the buttons all appear in a uniform, high-contrast display.
 

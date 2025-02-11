@@ -49,11 +49,16 @@ I used a very simple color scheme based on the background image I'm using which 
 # Features
 The game features a choice of three difficulty levels;
 
+![](./readme-assets/diff_buttons.png)
+
 + Easy, the player is required to find 4 pairs as quickly as possible
 + Medium, the player is required to find 6 pairs as quickly as possible.
 + Hard, the player is required to find 8 pairs as quickly as possible.
 
 Once the player selects thier difficulty, the game and timer starts, generating the chosen amount of pairs from an array of possibilities. The player must then chose which cards they wish to check for a match. Once two cards are chosen the game will check if they match and proceed by either keeping the cards displayed, or flipping them face down to try again.
+
+Cards being matched[](./readme-assets/card_match.gif)
+Cards do not match[](./readme-assets/card_no_match.gif)
 
 Once all paris are found the game will tell you you've won and generate a score based on difficulty level and time taken.
 

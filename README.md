@@ -87,7 +87,7 @@ I've also added a colorblind mode that add description text to the images on the
 |![](./readme-assets/card.png)|![](./readme-assets/card_cb.png)|
 
 ## Deployment
-The site has not yet been deployed using [GitPages](https://pages.github.com) in the following way.
+The site has been deployed using [GitPages](https://pages.github.com) in the following way.
 + In the Github repository, the Setting tab.
 + Under General, navigate to Code and Automation and select 'Pages'.
 + In the Build and Deployment section for Source, select 'Deploy from a branch' from the drop-down list.

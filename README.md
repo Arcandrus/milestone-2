@@ -142,4 +142,5 @@ I have also asked several users to explore the website on different devices incl
 
 [MDN WebDocs](https://developer.mozilla.org/en-US/), [W3Schools](https://www.w3schools.com) and [Stack Overflow](https://stackoverflow.co/teams/) were used to help general understanding and troubleshooting specific problems as I progressed.
 
+I would like to thank Rob Hall, another student on the course for his code block and help figuring out how to transpose local storage into a JSON for the purposes of saving high score information.
 I would also like to thank my mentor, Medale Oluwafemi, for his insights and support during this project and my friends Rew and Emma and the Frome MTG club who have helped me with testing and troubleshooting.

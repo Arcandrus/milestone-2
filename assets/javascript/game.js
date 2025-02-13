@@ -10,6 +10,17 @@ let timeCount = 0;
 let score = 0;
 let colorblind = 0;
 let difficulty;
+let introText = `<h3>Welcome to my Magic: the Gathering Memory Game!</h3>
+    <p> The object of the game is to find all the pairs in the fastest time you can. The faster you go, the higher your
+      score will be.</p>
+    <p>To start the game, click on the difficulty level you wish to attempt using the buttons above.</p>
+    <p> You can always restart the game at any time by clicking the same or another difficulty button.</p>
+    <p> When you've won the game by finding all the matches, you will be invited to save your score, and enter it on
+      your High Scores display.</p>
+    <p> You can see this display at any time by clicking the "Show High Scores" button.</p>
+    <p> Using colorblind mode will change some features to be easier to see, and will add text to the cards, a great
+      way to learn the guild names!</p>
+    <p> I hope you enjoy your experience with my game and good luck!</p>`;
 const cardContainer = document.getElementById('cardContainer');
 const timerDisplay = document.getElementById('timerDisplay');
 const matchDisplay = document.getElementById('matchDisplay');
@@ -283,17 +294,7 @@ function saveScore(fName, score, difficulty) {
   // Save back to localStorage
   localStorage.setItem(key, JSON.stringify(top5Scores));
   // Reset the page to default display
-  welcome.innerHTML = `<h3>Welcome to my Magic: the Gathering Memory Game!</h3>
-      <p> The object of the game is to find all the pairs in the fastest time you can. The faster you go, the higher your
-        score will be.</p>
-      <p>To start the game, click on the difficulty level you wish to attempt using the buttons above.</p>
-      <p> You can always restart the game at any time by clicking the same or another difficulty button.</p>
-      <p> When you've won the game by finding all the matches, you will be invited to save your score, and enter it on
-        your High Scores display.</p>
-      <p> You can see this display at any time by clicking the "Show High Scores" button.</p>
-      <p> Using colorblind mode will change some features to be easier to see, and will add text to the cards, a great
-        way to learn the guild names!</p>
-      <p> I hope you enjoy your experience with my game and good luck!</p>`;
+  welcome.innerHTML = introText;
   timerDisplay.innerText = ``;
   matchDisplay.innerText = ``;
   cardContainer.innerHTML = ``;
@@ -302,17 +303,7 @@ function saveScore(fName, score, difficulty) {
 // Exit modal without saving high score
 function savescoreNo() {
   // Reset the page to default display
-  welcome.innerHTML = `<h3>Welcome to my Magic: the Gathering Memory Game!</h3>
-    <p> The object of the game is to find all the pairs in the fastest time you can. The faster you go, the higher your
-      score will be.</p>
-    <p>To start the game, click on the difficulty level you wish to attempt using the buttons above.</p>
-    <p> You can always restart the game at any time by clicking the same or another difficulty button.</p>
-    <p> When you've won the game by finding all the matches, you will be invited to save your score, and enter it on
-      your High Scores display.</p>
-    <p> You can see this display at any time by clicking the "Show High Scores" button.</p>
-    <p> Using colorblind mode will change some features to be easier to see, and will add text to the cards, a great
-      way to learn the guild names!</p>
-    <p> I hope you enjoy your experience with my game and good luck!</p>`;
+  welcome.innerHTML = introText;
   timerDisplay.innerText = ``;
   matchDisplay.innerText = ``;
   cardContainer.innerHTML = ``;

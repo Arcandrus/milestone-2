@@ -5,7 +5,7 @@ Code Institute Project Milestone 2 - Interactive Front End Development
 
 1. [Live Demo](#demo)
 2. [User Stories](#user-stories)
-3. [Design](#design-&-ux)
+3. [Design](#design-ux)
 4. [Technologies](#technologies)
 5. [Features](#features)
 6. [Deployment](#deployment)
